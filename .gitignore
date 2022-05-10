@@ -75,5 +75,7 @@ DerivedDataCache/*
 
 *Binaries
 *Intermediate
+WindowsNoEditor
+*Mods
 .vscode
 .idea
