@@ -6,17 +6,17 @@
 
 class UReadStringArrayToColorArray;
 
-UCLASS()
+UCLASS(Blueprintable)
 class PROA34_API UReadStringArrayToColorArray : public UBlueprintAsyncActionBase {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintAssignable)
+    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FResponseDelegett OnSuccess;
     
-    UPROPERTY(BlueprintAssignable)
+    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FResponseDelegett OnFail;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FString TempString;
     
     UReadStringArrayToColorArray();

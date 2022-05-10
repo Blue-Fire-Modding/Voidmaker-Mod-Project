@@ -1,22 +1,22 @@
 #pragma once
 #include "CoreMinimal.h"
+#include "EFieldState.h"
 #include "Kismet/BlueprintFunctionLibrary.h"
 #include "UObject/NoExportTypes.h"
-#include "EFieldState.h"
 #include "UObject/NoExportTypes.h"
 #include "VoidMakerFunctionLibrary.generated.h"
 
 class AActor;
 
-UCLASS(BlueprintType)
+UCLASS(Blueprintable)
 class PROA34_API UVoidMakerFunctionLibrary : public UBlueprintFunctionLibrary {
     GENERATED_BODY()
 public:
     UVoidMakerFunctionLibrary();
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     static bool IsActorInsideObject(UPARAM(Ref) AActor*& Actor, TArray<AActor*> ActorsToIgnore, FVector SizeDetection);
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     static FTransform GetJSONFieldTransform(UPARAM(Ref) FString& Source, int32 SearchLimit);
     
     UFUNCTION(BlueprintCallable)

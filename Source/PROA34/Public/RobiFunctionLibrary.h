@@ -6,15 +6,15 @@
 class UObject;
 class AActor;
 
-UCLASS(BlueprintType)
+UCLASS(Blueprintable)
 class PROA34_API URobiFunctionLibrary : public UBlueprintFunctionLibrary {
     GENERATED_BODY()
 public:
     URobiFunctionLibrary();
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     static bool IsRobiValid(const UObject* Object);
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     static bool IsInFrustum(const AActor* Actor);
     
 };

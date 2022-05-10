@@ -3,7 +3,7 @@
 #include "Kismet/BlueprintFunctionLibrary.h"
 #include "CopyAndPasteOnClipboard.generated.h"
 
-UCLASS(BlueprintType)
+UCLASS(Blueprintable)
 class PROA34_API UCopyAndPasteOnClipboard : public UBlueprintFunctionLibrary {
     GENERATED_BODY()
 public:

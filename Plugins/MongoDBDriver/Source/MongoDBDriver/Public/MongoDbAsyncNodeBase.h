@@ -6,12 +6,12 @@
 class UDatabaseConnector;
 class IDatabaseConnector;
 
-UCLASS()
+UCLASS(Blueprintable)
 class UMongoDbAsyncNodeBase : public UBlueprintAsyncActionBase {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TScriptInterface<IDatabaseConnector> m_Connector;
     
 public:

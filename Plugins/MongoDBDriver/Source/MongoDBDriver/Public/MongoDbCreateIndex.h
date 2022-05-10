@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "DynMutlMongoDelegate.h"
 #include "MongoDbAsyncNodeBase.h"
+#include "DynMutlMongoDelegate.h"
 #include "DocumentValue.h"
 #include "MongoDbCreateIndex.generated.h"
 
@@ -9,14 +9,14 @@ class UDatabaseConnector;
 class IDatabaseConnector;
 class UMongoDbCreateIndex;
 
-UCLASS()
+UCLASS(Blueprintable)
 class UMongoDbCreateIndex : public UMongoDbAsyncNodeBase {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintAssignable)
+    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FDynMutlMongo Done;
     
-    UPROPERTY(BlueprintAssignable)
+    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FDynMutlMongo Failed;
     
     UMongoDbCreateIndex();

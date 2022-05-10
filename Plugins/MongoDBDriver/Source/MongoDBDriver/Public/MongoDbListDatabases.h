@@ -4,18 +4,18 @@
 #include "DynMultListDatabasesDelegate.h"
 #include "MongoDbListDatabases.generated.h"
 
-class UMongoDbListDatabases;
 class UDatabaseConnector;
 class IDatabaseConnector;
+class UMongoDbListDatabases;
 
-UCLASS()
+UCLASS(Blueprintable)
 class UMongoDbListDatabases : public UMongoDbAsyncNodeBase {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintAssignable)
+    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FDynMultListDatabases Done;
     
-    UPROPERTY(BlueprintAssignable)
+    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FDynMultListDatabases Failed;
     
     UMongoDbListDatabases();

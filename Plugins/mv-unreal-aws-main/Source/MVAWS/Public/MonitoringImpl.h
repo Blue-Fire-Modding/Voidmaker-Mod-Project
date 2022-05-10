@@ -3,7 +3,7 @@
 #include "UObject/Object.h"
 #include "MonitoringImpl.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class UMonitoringImpl : public UObject {
     GENERATED_BODY()
 public:

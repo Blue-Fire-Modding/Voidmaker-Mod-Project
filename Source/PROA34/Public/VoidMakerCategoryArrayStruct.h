@@ -7,7 +7,7 @@ USTRUCT(BlueprintType)
 struct FVoidMakerCategoryArrayStruct : public FTableRowBase {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FString> StringArray;
     
     PROA34_API FVoidMakerCategoryArrayStruct();

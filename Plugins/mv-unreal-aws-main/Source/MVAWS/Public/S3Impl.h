@@ -3,7 +3,7 @@
 #include "UObject/Object.h"
 #include "S3Impl.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class US3Impl : public UObject {
     GENERATED_BODY()
 public:

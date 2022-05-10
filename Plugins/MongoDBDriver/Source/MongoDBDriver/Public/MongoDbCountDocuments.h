@@ -9,14 +9,14 @@ class UMongoDbCountDocuments;
 class UDatabaseConnector;
 class IDatabaseConnector;
 
-UCLASS()
+UCLASS(Blueprintable)
 class UMongoDbCountDocuments : public UMongoDbAsyncNodeBase {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintAssignable)
+    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FDynMutlMongoCounts Done;
     
-    UPROPERTY(BlueprintAssignable)
+    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FDynMutlMongoCounts Failed;
     
     UMongoDbCountDocuments();

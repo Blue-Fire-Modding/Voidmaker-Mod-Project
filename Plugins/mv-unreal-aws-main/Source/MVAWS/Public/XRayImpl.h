@@ -3,7 +3,7 @@
 #include "UObject/Object.h"
 #include "XRayImpl.generated.h"
 
-UCLASS(BlueprintType)
+UCLASS(Blueprintable)
 class UXRayImpl : public UObject {
     GENERATED_BODY()
 public:

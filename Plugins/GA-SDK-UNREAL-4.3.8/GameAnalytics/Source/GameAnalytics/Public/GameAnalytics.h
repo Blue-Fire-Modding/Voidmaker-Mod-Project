@@ -9,7 +9,7 @@
 #include "EGAAdType.h"
 #include "GameAnalytics.generated.h"
 
-UCLASS(BlueprintType)
+UCLASS(Blueprintable)
 class GAMEANALYTICS_API UGameAnalytics : public UObject {
     GENERATED_BODY()
 public:

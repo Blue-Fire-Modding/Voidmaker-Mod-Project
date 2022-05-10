@@ -2,5 +2,5 @@
 #include "CoreMinimal.h"
 #include "DelegateCustomLineTraceForObjectsBoolDelegate.generated.h"
 
-UDELEGATE() DECLARE_DYNAMIC_DELEGATE_TwoParams(FDelegateCustomLineTraceForObjectsBool, bool, HitA, bool, HitB);
+UDELEGATE(BlueprintCallable) DECLARE_DYNAMIC_DELEGATE_TwoParams(FDelegateCustomLineTraceForObjectsBool, bool, HitA, bool, HitB);
 

@@ -5,13 +5,13 @@
 
 class UObject;
 
-UCLASS()
+UCLASS(Blueprintable)
 class PROA34_API ARobiObject : public AActor {
     GENERATED_BODY()
 public:
     ARobiObject();
 private:
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     bool IsRobiValid(const UObject* Object);
     
 };

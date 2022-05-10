@@ -1,19 +1,19 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "GameFramework/Actor.h"
+#include "DelegateCustomLineTraceByChannelSurfaceDelegate.h"
+#include "DelegateCustomLineTraceByChannelBoolAndVectorsDelegate.h"
+#include "UObject/NoExportTypes.h"
 #include "DelegateCustomBoxTraceDelegate.h"
 #include "UObject/NoExportTypes.h"
 #include "UObject/NoExportTypes.h"
-#include "DelegateCustomLineTraceByChannelSurfaceDelegate.h"
-#include "UObject/NoExportTypes.h"
 #include "DelegateCustomLineTraceForObjectsBoolDelegate.h"
-#include "DelegateCustomLineTraceByChannelBoolAndVectorsDelegate.h"
 #include "DelegateCustomTraceDelegate.h"
 #include "DelegateCustomLineTraceByChannelVectorsDelegate.h"
 #include "DelegateCustomEnemyDelegate.h"
 #include "RobiTraceHandler.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class PROA34_API ARobiTraceHandler : public AActor {
     GENERATED_BODY()
 public:

@@ -6,7 +6,7 @@
 
 class UObject;
 
-UCLASS(BlueprintType)
+UCLASS(Blueprintable)
 class PROA34_API UBlueFireFunctionLibrary : public UBlueprintFunctionLibrary {
     GENERATED_BODY()
 public:

@@ -8,14 +8,14 @@ class UMongoDbListCollections;
 class UDatabaseConnector;
 class IDatabaseConnector;
 
-UCLASS()
+UCLASS(Blueprintable)
 class UMongoDbListCollections : public UMongoDbAsyncNodeBase {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintAssignable)
+    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FDynMutlMongoStrings Done;
     
-    UPROPERTY(BlueprintAssignable)
+    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FDynMutlMongoStrings Failed;
     
     UMongoDbListCollections();

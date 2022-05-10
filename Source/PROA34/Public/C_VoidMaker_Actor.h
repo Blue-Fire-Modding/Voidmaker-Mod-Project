@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "DelegateOnLoadedDelegate.h"
 #include "GameFramework/Actor.h"
+#include "DelegateOnLoadedDelegate.h"
 #include "VoidMakerAssetStruct.h"
 #include "UObject/NoExportTypes.h"
 #include "C_VoidMaker_Actor.generated.h"
@@ -10,20 +10,20 @@ class AVoidMaker_ControllerC;
 class UStaticMeshComponent;
 class USplineComponent;
 
-UCLASS()
+UCLASS(Blueprintable)
 class PROA34_API AC_VoidMaker_Actor : public AActor {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite)
+    UPROPERTY(EditAnywhere)
     float DistanceInSpline;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool bInReverse;
     
-    UPROPERTY(BlueprintAssignable, BlueprintCallable)
+    UPROPERTY(BlueprintAssignable, BlueprintCallable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FDelegateOnLoaded OnLoaded;
     
-    UPROPERTY(BlueprintReadWrite)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<AVoidMaker_ControllerC*> VMController;
     
     AC_VoidMaker_Actor();

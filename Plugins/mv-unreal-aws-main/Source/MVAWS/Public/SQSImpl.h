@@ -3,7 +3,7 @@
 #include "UObject/Object.h"
 #include "SQSImpl.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class USQSImpl : public UObject {
     GENERATED_BODY()
 public:

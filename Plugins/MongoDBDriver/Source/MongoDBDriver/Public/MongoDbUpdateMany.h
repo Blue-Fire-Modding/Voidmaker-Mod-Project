@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "DynMutlMongoDelegate.h"
 #include "MongoDbAsyncNodeBase.h"
+#include "DynMutlMongoDelegate.h"
 #include "DocumentValue.h"
 #include "MongoDbUpdateMany.generated.h"
 
@@ -9,14 +9,14 @@ class UMongoDbUpdateMany;
 class UDatabaseConnector;
 class IDatabaseConnector;
 
-UCLASS()
+UCLASS(Blueprintable)
 class UMongoDbUpdateMany : public UMongoDbAsyncNodeBase {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintAssignable)
+    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FDynMutlMongo Done;
     
-    UPROPERTY(BlueprintAssignable)
+    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FDynMutlMongo Failed;
     
     UMongoDbUpdateMany();

@@ -9,14 +9,14 @@ class UDatabaseConnector;
 class IDatabaseConnector;
 class UMongoDbFindOneAndDelete;
 
-UCLASS()
+UCLASS(Blueprintable)
 class UMongoDbFindOneAndDelete : public UMongoDbAsyncNodeBase {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintAssignable)
+    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FDynMutlMongoDocument Done;
     
-    UPROPERTY(BlueprintAssignable)
+    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FDynMutlMongoDocument Failed;
     
     UMongoDbFindOneAndDelete();

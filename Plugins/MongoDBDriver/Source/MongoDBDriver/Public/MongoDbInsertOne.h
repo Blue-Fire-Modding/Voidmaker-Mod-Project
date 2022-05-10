@@ -9,14 +9,14 @@ class UDatabaseConnector;
 class IDatabaseConnector;
 class UMongoDbInsertOne;
 
-UCLASS()
+UCLASS(Blueprintable)
 class UMongoDbInsertOne : public UMongoDbAsyncNodeBase {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintAssignable)
+    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FDynMultInsert Done;
     
-    UPROPERTY(BlueprintAssignable)
+    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FDynMultInsert Failed;
     
     UMongoDbInsertOne();

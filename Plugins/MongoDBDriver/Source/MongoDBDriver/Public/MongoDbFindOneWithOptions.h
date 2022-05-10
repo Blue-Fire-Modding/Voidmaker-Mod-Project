@@ -10,14 +10,14 @@ class UMongoDbFindOneWithOptions;
 class UDatabaseConnector;
 class IDatabaseConnector;
 
-UCLASS()
+UCLASS(Blueprintable)
 class UMongoDbFindOneWithOptions : public UMongoDbAsyncNodeBase {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintAssignable)
+    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FDynMutlMongoDocument Done;
     
-    UPROPERTY(BlueprintAssignable)
+    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FDynMutlMongoDocument Failed;
     
     UMongoDbFindOneWithOptions();

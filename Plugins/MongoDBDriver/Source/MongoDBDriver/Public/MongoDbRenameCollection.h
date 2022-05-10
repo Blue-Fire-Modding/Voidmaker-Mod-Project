@@ -1,21 +1,21 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "DynMutlMongoDelegate.h"
 #include "MongoDbAsyncNodeBase.h"
+#include "DynMutlMongoDelegate.h"
 #include "MongoDbRenameCollection.generated.h"
 
 class UMongoDbRenameCollection;
 class UDatabaseConnector;
 class IDatabaseConnector;
 
-UCLASS()
+UCLASS(Blueprintable)
 class UMongoDbRenameCollection : public UMongoDbAsyncNodeBase {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintAssignable)
+    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FDynMutlMongo Done;
     
-    UPROPERTY(BlueprintAssignable)
+    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FDynMutlMongo Failed;
     
     UMongoDbRenameCollection();
